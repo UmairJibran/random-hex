@@ -21,9 +21,9 @@ const randomValue = () => {
   return validValues[Math.floor(Math.random() * validValues.length)];
 };
 
-const randomHex = () => {
+const randomHex = (len = 6) => {
   const parts = [];
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < len; index++) {
     parts.push(randomValue());
   }
   return parts.join('');
